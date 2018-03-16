@@ -4,7 +4,7 @@ sr.continuos= true;// define si el reoconocimiento de voz es constante o corto, 
 sr.interimResults = true; //
 sr.lang = 'es';
 
-var mos = document.getElementById('mostrar')
+var mos = document.getElementById('mostrar');
 
 //metodos
 
@@ -14,12 +14,15 @@ sr.onresult = function(e) {
            if (e.results[i].isFinal) {
             var valor =    e.results[i][0].transcript
           if (valor == "inicia") {
-            return {
+           return {
                 hola(){
                    mos.innerHTML('<p>hola, felicidades te Escuche</p>')
-                }
+                
             }
-          }   
+        }
+          }else{
+              console.log('nose que pasa');
+          }  
         }
         
     }
