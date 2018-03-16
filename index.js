@@ -10,6 +10,7 @@ var mos = document.getElementById('mostrar');
 
 sr.start();
 sr.onresult = function(e) {
+    console.log(e);
     for (let i = e.resultIndex; i < e.results.length; ++i) {
            if (e.results[i].isFinal) {
             var valor =    e.results[i][0].transcript
