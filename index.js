@@ -7,25 +7,24 @@ sr.lang = 'es';
 var mos = document.getElementById('mostrar');
 
 //metodos
+function hola(params) {
+    mos.innerHTML('<p>que hay</p>')
+}
 
 sr.start();
 sr.onresult = function(e) {
     console.log(e);
-    for (let i = e.resultIndex; i < e.results.length; ++i) {
-           if (e.results[i].isFinal) {
-            var valor =    e.results[i][0].transcript
-          if (valor == "inicia") {
-           return {
-                hola(){
-                   mos.innerHTML('<p>hola, felicidades te Escuche</p>')
-                
-            }
-        }
-          }else{
-              console.log('nose que pasa');
-          }  
-        }
+    // for (let i = e.resultIndex; i < e.results.length; ++i) {
+    //        if (e.results[i].isFinal) {
+    //         var valor =    e.results[i][0].transcript
+    //       if (valor == "inicia") {
+    //            hola();
+    //     }
+    //       }else{
+    //           console.log('nose que pasa');
+    //       }  
+    //     }
         
     }
-}
+
 
